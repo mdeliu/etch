@@ -1,5 +1,5 @@
-baseURL = "https://example.com"
-title = "Website Name"
+baseURL = "https://blog.mdeliu.com"
+title = "blog.mdeliu.com"
 theme = "etch"
 languageCode = "en-US"
 enableInlineShortcodes = true
@@ -7,25 +7,32 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  description = "Your site description"
-  copyright = "Copyright © 2021 Your Name"
+  description = "Personal blog of Musano Deliu. Mostly about topics in the IT resp. technical area."
+  copyright = ""
   dark = "auto"
   highlight = true
 
-[menu]
+ [menu]
   [[menu.main]]
     identifier = "posts"
-    name = "posts"
+    name = "Posts"
     title = "posts"
     url = "/"
-    weight = 10
+    weight = 1
 
   [[menu.main]]
-    identifier = "about"
-    name = "about"
-    title = "about"
-    url = "/about/"
-    weight = 20
+    identifier = "tags"
+    name = "Tags"
+    title = "tags"
+    url = "/tags/"
+    weight = 2
+    
+[[menu.main]]
+    identifier = "impressum"
+    name = "Impressum"
+    title = "impressum"
+    url = "/impressum/"
+    weight = 3
 
 [permalinks]
   posts = "/:title/"

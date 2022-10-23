@@ -15,11 +15,12 @@ body {
     margin: 0 auto;
     padding: 0 16px;
     line-height: 1.6;
-    overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 header#banner {
-    margin: 25px 0;
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0;
 }
 
 header#banner a {
@@ -39,20 +40,21 @@ header#banner h2 {
 }
 
 header#banner nav {
+	float:right;
     display: inline-block;
+    margin: 0 -5px;
 }
 
 header#banner nav ul {
     list-style-type: none;
     font-size: 1.05em;
-    text-transform: lowercase;
     margin: 0;
     padding: 0;
 }
 
 header#banner nav ul li {
     display: inline;
-    margin: 0 3px;
+    margin: 0 5px;
 }
 
 header#banner nav ul li a {
@@ -103,17 +105,15 @@ main#content hr {
     background: #d8d8d8;
 }
 
-main#content abbr {
-    cursor: help;
-}
 
 /* index.html styles */
 main#content ul#posts {
     list-style-type: none;
     font-size: 16px;
     font-size: 1.6rem;
-    margin-top: 0;
+    margin-top: 10px;
     padding: 0;
+
 }
 
 main#content ul#posts li {
@@ -124,8 +124,17 @@ main#content ul#posts li {
 main#content ul#posts small {
     font-size: 0.8em;
     color: #767676;
-    margin-left: 10px;
+    margin-left: 0px;
+    padding-right: 10px;
+    text-align: right;
 }
+
+
+/* 
+main#content ul#posts posttitle {
+}
+*/
+
 
 main#content ul#posts li a {
     text-decoration: none;
@@ -139,16 +148,24 @@ main#content ul#posts li a:hover small {
     color: inherit;
 }
 
+
+@media screen and (max-width: 500px) {
+    main#content ul#posts li span {
+    display: block;
+    color: #f00;
+    }
+}
+
+
 /* single.html styles */
 main#content header#post-header h1 {
     display: block;
     font-size: 23px;
     font-size: 2.3rem;
-    font-weight: 600;
     line-height: 1.15;
 }
 
-main#content header#post-header > div {
+main#content header#post-header div {
     display: block;
     font-size: 0.85em;
     color: #767676;
@@ -212,6 +229,7 @@ main#content figure img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+    border: 0px solid;
 }
 
 main#content figure figcaption {
@@ -239,7 +257,7 @@ main#content blockquote {
     font-style: italic;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 20px;
     padding-left: 15px;
     border-left: 3px solid #ccc;
 }
@@ -252,6 +270,8 @@ main#content pre {
 main#content code {
     font-size: 0.96em;
     padding: 0 5px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 0em;
 }
 
 main#content pre {
@@ -263,20 +283,33 @@ main#content pre {
     margin: 20px 0;
     padding: 1.5rem 1.5rem;
     line-height: 1.4;
+    border: 0px solid #d8d8d8;
 }
 
 main#content pre code {
     padding: 0;
+    border: 0px;
 }
 
-main#content .footnotes {
+main#content section.footnotes {
     font-size: 0.9em;
 }
 
 footer#footer {
+    text-align: center;
     font-size: 14px;
     font-size: 1.4rem;
-    font-weight: 400;
-    color: #b3b3b3;
-    margin: 40px 0;
+    font-weight: 300;
+    color: #949494;
+    margin: 20px 0;
+    padding: 0 0 10px 0;
+}
+
+footer#footer a {
+    color: #007dfa;
+    text-decoration: none;
+}
+
+footer#footer a:hover {
+    text-decoration: underline;
 }
